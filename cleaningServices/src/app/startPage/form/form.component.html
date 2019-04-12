@@ -1,0 +1,33 @@
+<mat-card>
+  <form #myForm="ngForm" (submit)="submit(myForm)">
+  <mat-form-field>
+    <input matInput  ngModel #name="ngModel" name="name" placeholder="Name" required>
+    <mat-error *ngIf="name.invalid">Please, enter your name!</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput  ngModel #lastname="ngModel" name="lastName" placeholder="Last Name">
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput  ngModel #email="ngModel" name="email" type="email" placeholder="Email">
+      <mat-error *ngIf="email.invalid"> You have entered invalid email!</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput ngModel #phone="ngModel" name="phone" type="phone" placeholder="Phone">
+      <mat-error *ngIf="phone.invalid"> Please, enter your phone number!</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select  name="service" ngModel #selectService="ngModel" placeholder="Select">
+    <mat-option value="Home Cleaning">Home Cleaning</mat-option>
+    <mat-option value="Interior Painting">Interior Painting</mat-option>
+    <mat-option value="Carpet cleaning">Сarpet cleaning</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button>Make order</button>
+  </form>
+
+</mat-card>
+<div>Имя: {{myForm.value.name}}</div>
+  <div>Email: {{myForm.value.email}}</div>
+  <div>Service: {{myForm.value.service}}</div>
+
+

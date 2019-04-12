@@ -1,0 +1,23 @@
+li {
+  list-style: none;
+  text-transform: uppercase;
+  margin: 5px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: #1e90ff;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+span {
+  margin-left: 58%;
+}
+
